@@ -26,7 +26,7 @@ main .container {
     background-color: hsl(0, 0%, 100%);
     border-radius: 12px;
     box-shadow: hsl(210, 60%, 98%) 0px 8px 24px, hsl(210, 60%, 98%) 0px 16px 56px, hsl(210, 60%, 98%) 0px 24px 80px;
-    width: 60%;
+    width: 65%;
     padding: 40px;
 }
 
@@ -74,8 +74,7 @@ section .contain {
     display: grid;
     align-items: center;
     justify-content: center;
-    padding: 0 30px;
-    gap: 40px;
+    gap: 20px;
 }
 
 section .contain .message {
@@ -86,6 +85,12 @@ section .contain .message {
     width: 100%;
     align-self: stretch;
     gap: 30px;
+    padding: 20px;
+}
+
+section .contain .message.unseen {
+    background-color: hsl(210, 60%, 98%);
+    border-radius: 5px;
 }
 
 section .contain .message.photo {
