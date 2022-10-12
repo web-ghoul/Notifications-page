@@ -1,0 +1,370 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: hsl(210, 60%, 98%);
+    /* height: 100vh; */
+    /* width: 100vw; */
+    padding: 50px;
+}
+
+main .container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    left: 50%;
+    position: relative;
+    transform: translateX( -50%);
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 12px;
+    box-shadow: hsl(210, 60%, 98%) 0px 8px 24px, hsl(210, 60%, 98%) 0px 16px 56px, hsl(210, 60%, 98%) 0px 24px 80px;
+    width: 60%;
+    padding: 40px;
+}
+
+header .contain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+header .contain .not {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+}
+
+header .contain .not span {
+    background-color: hsl(219, 85%, 26%);
+    width: 30px;
+    height: 28px;
+    font-size: 18px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(0, 0%, 100%);
+    font-weight: 800;
+}
+
+header .contain .mark {
+    font-size: 18px;
+    font-weight: 500;
+    transition: ease-in-out all .3s;
+    color: hsl(219, 12%, 42%);
+}
+
+header .contain .mark:hover {
+    cursor: pointer;
+    color: hsl(219, 85%, 26%);
+}
+
+section .contain {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    gap: 40px;
+}
+
+section .contain .message {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    align-content: stretch;
+    width: 100%;
+    align-self: stretch;
+    gap: 30px;
+}
+
+section .contain .message.photo {
+    justify-content: space-between;
+}
+
+section .contain .message>picture img,
+section .contain .message .box>picture img {
+    width: 60px;
+    height: 60px;
+}
+
+section .contain .message .text {
+    display: grid;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 18px;
+}
+
+section .contain .message .text .content.dot::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: hsl(1, 90%, 64%);
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+section .contain .message .text .content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: hsl(219, 12%, 42%);
+    position: relative;
+}
+
+section .contain .message .text span.name {
+    color: hsl(224, 21%, 14%);
+    font-weight: 800;
+    transition: ease-in-out all .3s;
+}
+
+section .contain .message .text span.name:hover {
+    color: hsl(219, 85%, 26%);
+    cursor: pointer;
+}
+
+section .contain .message .text span:not(.name):not(.ago) {
+    padding: 0 3px;
+    cursor: pointer;
+}
+
+section .contain .message .text span.ago {
+    color: hsl(219, 14%, 63%);
+}
+
+section .contain .message .text .content p span:not(.name) {
+    font-weight: 800;
+    color: hsl(219, 85%, 26%);
+}
+
+section .contain .message .text .content p span.gray {
+    color: hsl(219, 12%, 42%);
+}
+
+section .contain .message>.box {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+section .contain .message .text p {
+    line-height: 25px;
+}
+
+section .contain .message .text p.msg {
+    border-radius: 6px;
+    padding: 15px;
+    border: 1px solid #eee;
+    color: hsl(219, 12%, 42%);
+    margin-top: 10px;
+    transition: ease-in-out all .3s;
+    cursor: pointer;
+}
+
+section .contain .message .text p.msg:hover {
+    background-color: hsl(211, 68%, 94%);
+    cursor: pointer;
+}
+
+picture.photo {
+    cursor: pointer;
+}
+
+@media (max-width:1200px) {
+    body {
+        padding: 40px;
+    }
+    main .container {
+        gap: 50px;
+        border-radius: 10px;
+        width: 85%;
+        padding: 35px;
+    }
+    header .contain .not {
+        gap: 9px;
+        font-size: 18px;
+    }
+    header .contain .not span {
+        width: 28px;
+        height: 25px;
+        font-size: 18px;
+        border-radius: 5px;
+    }
+    header .contain .mark {
+        font-size: 18px;
+    }
+    section .contain {
+        padding: 0 28px;
+        gap: 35px;
+    }
+    section .contain .message {
+        gap: 28px;
+    }
+    section .contain .message>picture img,
+    section .contain .message .box>picture img {
+        width: 55px;
+        height: 55px;
+    }
+    section .contain .message .text {
+        font-size: 16px;
+    }
+    section .contain .message .text .content.dot::after {
+        width: 7px;
+        height: 7px;
+        right: -12px;
+    }
+    section .contain .message .text .content {
+        gap: 8px;
+    }
+    section .contain .message .text span:not(.name):not(.ago) {
+        padding: 0 3px;
+    }
+    section .contain .message>.box {
+        gap: 28px;
+    }
+    section .contain .message .text p {
+        line-height: 24px;
+    }
+    section .contain .message .text p.msg {
+        border-radius: 6px;
+        padding: 15px;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width:992px) {
+    body {
+        padding: 20px;
+    }
+    main .container {
+        gap: 40px;
+        border-radius: 8px;
+        width: 100%;
+        padding: 30px;
+    }
+    header .contain .not {
+        gap: 8px;
+        font-size: 17px;
+    }
+    header .contain .not span {
+        width: 25px;
+        height: 22px;
+        font-size: 17px;
+        border-radius: 4px;
+    }
+    header .contain .mark {
+        font-size: 17px;
+    }
+    section .contain {
+        padding: 0 25px;
+        gap: 30px;
+    }
+    section .contain .message {
+        gap: 25px;
+    }
+    section .contain .message>picture img,
+    section .contain .message .box>picture img {
+        width: 50px;
+        height: 50px;
+    }
+    section .contain .message .text {
+        font-size: 15px;
+    }
+    section .contain .message .text .content.dot::after {
+        width: 6px;
+        height: 6px;
+        right: -10px;
+    }
+    section .contain .message .text .content {
+        gap: 7px;
+    }
+    section .contain .message .text span:not(.name):not(.ago) {
+        padding: 0 3px;
+    }
+    section .contain .message>.box {
+        gap: 25px;
+    }
+    section .contain .message .text p {
+        line-height: 24px;
+    }
+    section .contain .message .text p.msg {
+        border-radius: 5px;
+        padding: 12px;
+        margin-top: 8px;
+    }
+}
+
+@media (max-width:768px) {
+    body {
+        height: 100vh;
+    }
+    main .container {
+        gap: 30px;
+        border-radius: 6px;
+        padding: 20px;
+    }
+    header .contain .not {
+        gap: 6px;
+        font-size: 15px;
+    }
+    header .contain .not span {
+        width: 22px;
+        height: 20px;
+        font-size: 16px;
+        border-radius: 3px;
+    }
+    header .contain .mark {
+        font-size: 16px;
+    }
+    section .contain {
+        padding: 0 20px;
+        gap: 20px;
+    }
+    section .contain .message {
+        gap: 20px;
+    }
+    section .contain .message>picture img,
+    section .contain .message .box>picture img {
+        width: 40px;
+        height: 40px;
+    }
+    section .contain .message .text {
+        font-size: 12px;
+    }
+    section .contain .message .text .content.dot::after {
+        width: 4px;
+        height: 4px;
+        right: -8px;
+    }
+    section .contain .message .text .content {
+        gap: 5px;
+    }
+    section .contain .message .text span:not(.name):not(.ago) {
+        padding: 0 3px;
+    }
+    section .contain .message>.box {
+        gap: 20px;
+    }
+    section .contain .message .text p {
+        line-height: 24px;
+    }
+    section .contain .message .text p.msg {
+        border-radius: 3px;
+        padding: 10px;
+        margin-top: 5px;
+    }
+}
